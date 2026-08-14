@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shadow Legion</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/start_form.css" />
+
+</head>
+<body>
+
+<div id="form" style="display: flex">
+  <div id="hi-form">
+    <p></p>
+  </div>
+  <div id="registration-menu">
+    <input id="ID" type="text" placeholder="User-ID"/>
+    <input id="API" type="password" placeholder="API"/>
+
+    <p id="verify_error"></p>
+
+    <input type="checkbox" value="remember me" id="remember_me" />
+    <label for="remember_me">Remember me</label>
+
+    <button id="send">next</button>
+  </div>
+</div>
+
+<button id="delete_data">delete data</button>
+<h1>Shadow Legion</h1>
+<h1 id="Hi_name"></h1>
+<button id="load">Load group</button>
+<h2>Accept</h2>
+<pre id="accept"></pre>
+
+<h2>Wait</h2>
+
+<pre id="wait"></pre>
+
+<h2>Massage</h2>
+
+<div id="misses" style="display: none"></div>
+<div class="quest_num" style="display: none">
+  <p class="text">quest number</p>
+  <input type="number" id="quest_number"/>
+</div>
+
+<button id="generate">Generate</button>
+
+<pre id="massage"></pre>
+
+<button id="copyBtn">
+  Copy
+</button>
+
+
+<script src="copy.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

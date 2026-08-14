@@ -1,0 +1,571 @@
+/* =========================
+   SHADOW LEGION
+   Main styles
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #080a12;
+    --bg-secondary: #0e1020;
+    --panel: #12152a;
+    --panel-light: #181c35;
+
+    --accent: #6ee7b7;
+    --accent-dark: #2f9d78;
+    --purple: #7772ff;
+
+    --text: #e8eaf6;
+    --text-muted: #8e93b5;
+
+    --danger: #ff5c70;
+    --border: rgba(126, 132, 255, 0.18);
+
+    --radius: 16px;
+}
+
+html {
+    min-height: 100%;
+    background: var(--bg);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background:
+            radial-gradient(
+                    circle at 50% -10%,
+                    rgba(119, 114, 255, 0.16),
+                    transparent 45%
+            ),
+            radial-gradient(
+                    circle at 100% 100%,
+                    rgba(110, 231, 183, 0.06),
+                    transparent 35%
+            ),
+            var(--bg);
+
+    color: var(--text);
+
+    font-family:
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            Roboto,
+            Arial,
+            sans-serif;
+
+    padding: 18px;
+}
+
+/* =========================
+   MAIN CONTAINER
+   ========================= */
+
+body > h1,
+body > h2,
+body > pre,
+body > button,
+body > #Hi_name {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =========================
+   TITLES
+   ========================= */
+
+h1 {
+    font-size: 26px;
+    margin-top: 25px;
+    margin-bottom: 12px;
+
+    color: var(--text);
+
+    letter-spacing: -0.5px;
+}
+
+#Hi_name {
+    color: var(--accent);
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 17px;
+    color: var(--text-muted);
+
+    margin-top: 28px;
+    margin-bottom: 9px;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+button {
+    appearance: none;
+
+    width: 100%;
+    max-width: 700px;
+
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 1px solid var(--border);
+
+    background: var(--panel-light);
+    color: var(--text);
+
+    min-height: 44px;
+    padding: 10px 16px;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+            transform 0.15s ease,
+            background 0.15s ease,
+            border-color 0.15s ease,
+            box-shadow 0.15s ease;
+}
+
+button:hover {
+    background: #202541;
+    border-color: rgba(119, 114, 255, 0.45);
+
+    box-shadow:
+            0 0 18px rgba(119, 114, 255, 0.12);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+/* Главная кнопка загрузки */
+
+#load {
+    width: 100%;
+    max-width: 700px;
+
+    display: block;
+
+    margin-top: 20px;
+
+    background: linear-gradient(
+            135deg,
+            var(--purple),
+            #5751d8
+    );
+
+    border-color: transparent;
+
+    box-shadow:
+            0 8px 25px rgba(119, 114, 255, 0.2);
+}
+
+#load:hover {
+    background: linear-gradient(
+            135deg,
+            #8580ff,
+            #625ce5
+    );
+}
+
+/* Удаление данных */
+
+#delete_data {
+    color: #ff8997;
+
+    background: rgba(255, 92, 112, 0.07);
+    border-color: rgba(255, 92, 112, 0.18);
+
+    margin-bottom: 10px;
+}
+
+#delete_data:hover {
+    background: rgba(255, 92, 112, 0.14);
+}
+
+/* Copy */
+
+#copyBtn {
+    width: 100%;
+    max-width: 700px;
+
+    margin-top: 12px;
+
+    color: var(--accent);
+
+    background: rgba(110, 231, 183, 0.07);
+    border-color: rgba(110, 231, 183, 0.2);
+}
+
+#copyBtn:hover {
+    background: rgba(110, 231, 183, 0.13);
+}
+
+/* =========================
+   OUTPUT BLOCKS
+   ========================= */
+
+pre {
+    width: 100%;
+    max-width: 700px;
+
+    min-height: 70px;
+
+    margin-top: 0;
+
+    padding: 15px;
+
+    background:
+            linear-gradient(
+                    145deg,
+                    rgba(255, 255, 255, 0.025),
+                    rgba(255, 255, 255, 0.01)
+            ),
+            var(--panel);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    color: #cdd1eb;
+
+    font-family:
+            "SFMono-Regular",
+            Consolas,
+            "Liberation Mono",
+            monospace;
+
+    font-size: 13px;
+    line-height: 1.55;
+
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+
+    box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.22);
+
+    overflow-x: auto;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+    body {
+        padding: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    h2 {
+        margin-top: 24px;
+    }
+
+    button {
+        min-height: 48px;
+        font-size: 15px;
+    }
+
+    pre {
+        font-size: 12px;
+        padding: 13px;
+    }
+}
+
+/* =========================
+   DESKTOP
+   ========================= */
+
+@media (min-width: 700px) {
+    body {
+        padding: 35px 25px;
+    }
+
+    body > h1:first-of-type {
+        margin-top: 30px;
+    }
+}
+
+
+/* =========================
+   MISSES / USERS
+   ========================= */
+
+#misses {
+    width: 100%;
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    background:
+            linear-gradient(
+                    145deg,
+                    rgba(255, 92, 112, 0.045),
+                    rgba(119, 114, 255, 0.025)
+            ),
+            var(--panel);
+
+    border: 1px solid rgba(255, 92, 112, 0.18);
+
+    border-radius: 18px;
+
+    box-shadow:
+            0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   USER ROW
+   ========================= */
+
+#misses > div {
+    width: 100%;
+
+    min-height: 68px;
+
+    padding: 10px 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    background:
+            rgba(255, 255, 255, 0.025);
+
+    border: 1px solid rgba(126, 132, 255, 0.12);
+
+    border-radius: 13px;
+
+    transition:
+            background 0.2s ease,
+            border-color 0.2s ease,
+            transform 0.15s ease;
+}
+
+#misses > div:hover {
+    background: rgba(255, 255, 255, 0.045);
+
+    border-color: rgba(126, 132, 255, 0.22);
+}
+
+
+/* =========================
+   USER NAME
+   ========================= */
+
+#misses > div span {
+    min-width: 0;
+
+    color: #ff91a0;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* =========================
+   SELECT
+   ========================= */
+
+#misses select {
+    flex-shrink: 0;
+
+    width: 125px;
+    height: 44px;
+
+    padding: 0 10px;
+
+    border: 1px solid rgba(126, 132, 255, 0.25);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #0a0c18;
+
+    color: var(--text);
+
+    font-size: 15px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+            border-color 0.2s ease,
+            box-shadow 0.2s ease,
+            background 0.2s ease;
+}
+
+#misses select:focus {
+    border-color: var(--purple);
+
+    background: #0e1020;
+
+    box-shadow:
+            0 0 0 3px rgba(119, 114, 255, 0.1);
+}
+
+
+/* =========================
+   OPTIONS
+   ========================= */
+
+#misses select option {
+    background: #101326;
+    color: var(--text);
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    #misses {
+        padding: 8px;
+
+        gap: 8px;
+
+        border-radius: 16px;
+    }
+
+    #misses > div {
+        min-height: 64px;
+
+        padding: 9px 10px;
+
+        gap: 10px;
+    }
+
+    #misses > div span {
+        font-size: 16px;
+    }
+
+    #misses select {
+        width: 115px;
+        height: 46px;
+
+        font-size: 15px;
+    }
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+   ========================= */
+
+@media (max-width: 360px) {
+
+    #misses > div span {
+        font-size: 14px;
+    }
+
+    #misses select {
+        width: 105px;
+    }
+}
+
+
+
+
+
+.quest_num {
+    width: 100%;
+    max-width: 700px;
+
+    margin: 15px auto 10px;
+    padding: 14px 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    background: var(--panel);
+
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+.quest_num .text {
+    margin: 0;
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+
+#quest_number {
+    width: 100px;
+    height: 46px;
+
+    padding: 0 12px;
+
+    border: 1px solid rgba(119, 114, 255, 0.25);
+    border-radius: 11px;
+
+    outline: none;
+
+    background: #0a0c18;
+    color: var(--text);
+
+    font-size: 16px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+#quest_number:focus {
+    border-color: var(--purple);
+
+    box-shadow:
+            0 0 0 3px rgba(119, 114, 255, 0.1);
+}
+
+
+@media (max-width: 600px) {
+    .quest_num {
+        min-height: 64px;
+    }
+
+    #quest_number {
+        width: 90px;
+        height: 46px;
+    }
+}
