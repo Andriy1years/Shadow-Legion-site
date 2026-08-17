@@ -301,8 +301,7 @@ document.getElementById("load").addEventListener("click", async () => {
 
   document.getElementById("generate").addEventListener("click", () => {
     const quest_name = quest_key
-    const filtered = quest_name.filter((name) => name !== null);
-
+    const filtered = quest_name.find((name) => name !== null);
     const quest_num = document.getElementById("quest_number");
     const message =
       `**Quest ${quest_num.value} - ${filtered}**\n\n` +
