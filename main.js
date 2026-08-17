@@ -201,7 +201,6 @@ document.getElementById("load").addEventListener("click", async () => {
   //вайб код *доработаный ии
   const data = await test.json();
 
-  const users = {};
   let RSVPN = [];
   let quest_key = [];
   let test_for_quest_peinding = "none";
@@ -214,7 +213,6 @@ document.getElementById("load").addEventListener("click", async () => {
     const rsvp = member.party.quest.RSVPNeeded;
     const key = member.party.quest.key;
 
-    users[member._id] = member.profile.name;
 
     RSVPN.push(rsvp);
     quest_key.push(key);
@@ -227,16 +225,17 @@ document.getElementById("load").addEventListener("click", async () => {
         test_for_quest_peinding = "start";
       }
     }
+    //wait quest
     if (rsvp) {
-      waiting_array_name_wait.push(member.profile.name);
+      waiting_array_name_wait.push(member.auth.local.username);
     } else {
-      accept_array_name_wait.push(member.profile.name);
+      accept_array_name_wait.push(member.auth.local.username);
     }
-
+    //start quest
     if (quest_key[num] == null) {
-      waiting_array_name_start.push(member.profile.name);
+      waiting_array_name_start.push(member.auth.local.username);
     } else {
-      accept_array_name_start.push(member.profile.name);
+      accept_array_name_start.push(member.auth.local.username);
     }
     num++;
   }
